@@ -1,0 +1,154 @@
+header {
+  margin: 0;
+  padding: 0 0px;
+  background-color: rgba(28, 34, 36, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 15px 10px -15px #1111112b;
+          box-shadow: 0 15px 10px -15px #1111112b;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1024;
+  top: 0;
+}
+
+.nav-brand a, .nav-brand button,
+.cart-container a,
+.cart-container button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 32px;
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+}
+
+.nav-brand a svg, .nav-brand button svg,
+.cart-container a svg,
+.cart-container button svg {
+  margin-left: 8px;
+  font-size: 30px;
+}
+
+.nav-brand:hover,
+.cart-container:hover {
+  background-color: rgba(28, 34, 36, 0.5);
+}
+
+.cart-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart-container a, .cart-container button {
+  margin: auto;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-container a span:first-child, .cart-container button span:first-child {
+  padding-right: 8px;
+}
+
+.cart-container a span:first-child[data-items]::after, .cart-container button span:first-child[data-items]::after {
+  position: relative;
+  content: attr(data-items);
+  font-size: 12px;
+  background-color: red;
+  padding: 2px 4px;
+  border-radius: 50%;
+  top: -8px;
+  right: -4px;
+}
+
+.searchBox-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.searchBox-container form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  margin: 0 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.searchBox-container form input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 8px 56px 8px 16px;
+  border: transparent;
+  border-radius: 2px;
+  width: 100%;
+  font-size: 15px;
+  color: rgba(128, 128, 128, 0.897);
+  outline: rgba(28, 34, 36, 0.5);
+  max-width: 500px;
+}
+
+.searchBox-container form button[type="submit"] {
+  background-color: #e96125;
+  position: relative;
+  right: 36px;
+  padding-right: 8px !important;
+  padding-left: 8px !important;
+  border: unset;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  cursor: pointer;
+}
+
+.searchBox-container form + svg {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-brand a, .nav-brand button,
+  .cart-container a,
+  .cart-container button {
+    font-size: 22px;
+    padding: 14px 16px;
+  }
+  .cart-container a, .cart-container button {
+    font-size: 16px;
+  }
+  .searchBox-container form {
+    margin: 0 0px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cart-container a span:first-child,
+  .cart-container button span:first-child {
+    display: none;
+  }
+  .searchBox-container form {
+    display: none;
+  }
+  .searchBox-container form + svg {
+    margin-left: auto;
+    display: block;
+  }
+}
+/*# sourceMappingURL=header.css.map */
